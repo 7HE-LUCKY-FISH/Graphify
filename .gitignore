@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.eggs/
+dist/
+sdist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+venv.bak/
+venv.old/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# flake8
+.flake8
+
+# pytest
+.pytest_cache/
+
+# IPython
+ipython_config.py
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Temp files
+*~
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Compiled files
+*.pyc
+*.pyd
