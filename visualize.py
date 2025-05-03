@@ -55,7 +55,7 @@ def draw_chain(
 
     manager = plt.get_current_fig_manager()
     if hasattr(manager, 'toolbar'):
-        manager.toolbar.pan()  #
+        manager.toolbar.pan() 
 
     plt.tight_layout()
     plt.show()
