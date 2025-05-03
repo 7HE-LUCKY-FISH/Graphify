@@ -1,8 +1,9 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from typing import Dict, Optional
-
+import matplotlib
 # Draw weighted directed graph of genres
+matplotlib.use('TkAgg')
 
 def draw_chain(
     transition_probs: Dict[str, Dict[str, float]],
@@ -51,4 +52,10 @@ def draw_chain(
                    bbox=dict(facecolor='white', alpha=0.8, edgecolor='black', boxstyle='round,pad=0.5'))
 
     plt.axis('off')
+
+    manager = plt.get_current_fig_manager()
+    if hasattr(manager, 'toolbar'):
+        manager.toolbar.pan()  #
+
+    plt.tight_layout()
     plt.show()
