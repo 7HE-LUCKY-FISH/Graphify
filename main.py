@@ -23,14 +23,16 @@ def main():
     # Fetch and build model
     sequence = get_genre_sequence(sp, limit=50)
     chain = build_chain(sequence)
-
-    # Visualize
-    draw_chain(chain, predicted_genre=next_genre, current_genre=current)
-
+    
     current = sequence[-1] if sequence else random.choice(list(chain.keys()))
     next_genre = predict_next(current, chain)
     print(f"Last listened genre: {current}")
     print(f"Predicted next genre: {next_genre}")
+
+    # Visualize
+    draw_chain(chain, predicted_genre=next_genre, current_genre=current)
+
+
 
 
 if __name__ == "__main__":
