@@ -12,6 +12,7 @@ sdist/
 MANIFEST
 
 # Environments
+.cache
 .env
 .venv
 env/

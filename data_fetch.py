@@ -8,7 +8,8 @@ def get_genre_sequence(
     limit: int = 100
 ) -> List[str]:
     """
-    Returns a chronological list of genres from the user's recently played tracks.
+    Returns a chronological list of all genres from the user's recently played tracks.
+    If a track has multiple genres, all genres are included in sequence.
     """
     results = sp.current_user_recently_played(limit=limit)
     genre_sequence = []
@@ -18,7 +19,10 @@ def get_genre_sequence(
         artist_id = track["artists"][0]["id"]
         artist = sp.artist(artist_id)
         genres = artist.get("genres", [])
-        genre = genres[0] if genres else "unknown"
-        genre_sequence.append(genre)
+        
+        if genres:
+            genre_sequence.extend(genres)
+        else:
+            genre_sequence.append("unknown")
 
     return genre_sequence
