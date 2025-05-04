@@ -2,7 +2,15 @@
 
 The project, uses the Spotify API to analyze a user's listening history and generate a Markov chain model of their genre preferences. This model is then visualized as a directed graph, showing the transitions between genres.
 
+### V2
+
+![Figure_1](https://github.com/user-attachments/assets/15b5527e-d1d0-4425-b6ef-c01aeb2652fc)
+
+
+### V1
 ![Figure_1](https://github.com/user-attachments/assets/7d5d7e39-bcb1-496c-a90f-19691cb20a1e)
+
+
 
 ## Setup and Run Instructions
 
